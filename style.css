@@ -1,0 +1,174 @@
+/*================== RESET +++++++++++++++++++*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*================== VARIABLES +++++++++++++++++++*/
+:root {
+  --header-height: 4.5rem;
+  /* HSL color mode */
+
+  --hue: 345;
+  /* Variaveis funcionam para receber valores de configurações
+     Nesse caso, ela está recebendo valores de cores específicas */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+/*================== BASE +++++++++++++++++++*/
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(
+    --text-color
+  ); /* Aplicação de uma variável com cores pré-definidas */
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased; /* Propriedade que deixa a font um pouco mais leve. Só é aplicavel em navegadores compativeis */
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 00.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--base-color-alt);
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+
+/*================== LAYOUT +++++++++++++++++++*/
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  /*margin: 0 auto;  aqui o 0 se refere aos top end bottom, e o auto para left end right. Ou seja, nenhuma margem na lateral, automático nos lados*/
+}
+
+.grid {
+  display: grid; /* habilita funcionalidades para o elemento selecionado */
+  gap: 2rem;
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex; /* alinha o elemento para ficar dentro da tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed; /* Essa config faz com que o header fique fixo no topo da pagina */
+  z-index: 100;
+  background-color: var(--body-color);
+}
+
+nav {
+  height: var(
+    --header-height
+  ); /* responsivo: se adapta aos tipos de dispositiso (mobile, desktop e tablet*/
+  align-items: center;
+  display: flex; /* deixa os elementos filhos um do lado do outro */
+  justify-content: space-between;
+  width: 100%; /* Importante o elemento filho (nav) receber o mesmo valor de largura do elemento pai (header) */
+}
+
+.logo {
+  font: 700 1.3125rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+.logo span {
+  color: var(--base-color);
+}
+
+.section {
+  padding: 5rem 0; /* vai criar um espaço de 80px em todas as sessões */
+}
+
+main {
+  margin-top: var(
+    --header-height
+  ); /* Todos os conteudos abaixo tem que respeitar o main*/
+}
+
+/*================== HOME +++++++++++++++++++*/
+#home {
+  overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .imagem {
+  position: relative;
+}
+
+#home .imagem img {
+  position: relative;
+  right: 2.96rem;
+}
+
+#home .imagem::before {
+  /* SUDO ELEMENT = Cria um elemento fantasma */
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0; /* Todos os elementos estão, por padrão, com valor 0 no eixo Z. Quando damos um valor a mais que o padrão, ele se sobrepõe */
+}
+
+#home .imagem img,
+#home .imagem::before {
+  border-radius: 0.25rem; /* Adiciona uma borda na borda (kkkk) */
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
