@@ -172,3 +172,44 @@ main {
 #home .text p {
   margin-bottom: 2rem;
 }
+
+/*================== SECTION 1 +++++++++++++++++++*/
+#section-1 .container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+#section-1 .text h1 {
+  margin-bottom: 1.5rem;
+}
+
+#section-1 .text p {
+  margin-bottom: 2rem;
+}
+
+#section-1 .grid {
+  display: grid; /* habilita funcionalidades para o elemento selecionado */
+  gap: 2rem;
+}
+
+#section-1 .imagem {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+#section-1 .imagem img {
+  width: 100%;
+}
+
+#section-1 {
+  overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+  margin-top: var(--header-height);
+}
+
+#section-1 .container {
+  margin: 0;
+  width: 100%;
+}
