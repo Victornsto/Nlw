@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -41,7 +45,7 @@ body {
   -webkit-font-smoothing: antialiased; /* Propriedade que deixa a font um pouco mais leve. Só é aplicavel em navegadores compativeis */
 }
 
-h1 {
+.titlle {
   font: 700 1.875rem 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
@@ -116,6 +120,36 @@ nav {
   display: flex; /* deixa os elementos filhos um do lado do outro */
   justify-content: space-between;
   width: 100%; /* Importante o elemento filho (nav) receber o mesmo valor de largura do elemento pai (header) */
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+/*================== MOSTRAR MENU +++++++++++++++++++*/
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 /*================== LOGO +++++++++++++++++++*/
