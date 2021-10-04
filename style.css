@@ -84,6 +84,18 @@ h1 {
   gap: 2rem;
 }
 
+.section {
+  padding: 5rem 0; /* vai criar um espaço de 80px em todas as sessões */
+}
+
+main {
+  margin-top: calc(
+    var(--header-height) + 2rem
+  ); /* Todos os conteudos abaixo tem que respeitar o main*/
+}
+
+/*================== HEADER +++++++++++++++++++*/
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -106,22 +118,14 @@ nav {
   width: 100%; /* Importante o elemento filho (nav) receber o mesmo valor de largura do elemento pai (header) */
 }
 
+/*================== LOGO +++++++++++++++++++*/
+
 .logo {
   font: 700 1.3125rem 'Poppins', sans-serif;
   color: var(--title-color);
 }
 .logo span {
   color: var(--base-color);
-}
-
-.section {
-  padding: 5rem 0; /* vai criar um espaço de 80px em todas as sessões */
-}
-
-main {
-  margin-top: var(
-    --header-height
-  ); /* Todos os conteudos abaixo tem que respeitar o main*/
 }
 
 /*================== HOME +++++++++++++++++++*/
@@ -174,42 +178,57 @@ main {
 }
 
 /*================== SECTION 1 +++++++++++++++++++*/
-#section-1 .container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  text-align: center;
+#about .container {
   margin: 0;
 }
 
-#section-1 .text h1 {
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: justify;
+}
+
+#about .text h1 {
   margin-bottom: 1.5rem;
 }
 
-#section-1 .text p {
+#about .text p {
   margin-bottom: 2rem;
 }
 
-#section-1 .grid {
+#about .grid {
   display: grid; /* habilita funcionalidades para o elemento selecionado */
   gap: 2rem;
 }
 
-#section-1 .imagem {
+#about .imagem {
   position: relative;
   margin: 0;
   width: 100%;
 }
 
-#section-1 .imagem img {
+#about .imagem img {
   width: 100%;
 }
 
-#section-1 {
+#about .imagem::before {
+  /* SUDO ELEMENT = Cria um elemento fantasma */
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.38%;
+  left: -31.108%;
+  z-index: -1; /* Todos os elementos estão, por padrão, com valor 0 no eixo Z. Quando damos um valor a mais que o padrão, ele se sobrepõe */
+}
+
+#about .imagem img,
+#about .imagem::before {
+  border-radius: 0.25rem; /* Adiciona uma borda na borda (kkkk) */
+}
+
+#about {
   overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
   margin-top: var(--header-height);
-}
-
-#section-1 .container {
-  margin: 0;
-  width: 100%;
 }
