@@ -128,6 +128,24 @@ nav ul li {
 
 nav ul li a {
   transition: color 0.3s;
+  position: relative;
+}
+
+/* pseudo element = Cria um efeito que, ao passar o mouse por cima dos li, cria uma linha com 24px abaixo(after) do li */
+nav ul li a:after {
+  /* pseudo element = Cria um efeito que, ao passar o mouse por cima dos li, cria uma linha com 24px abaixo(after) do li */
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 nav ul li a:hover {
