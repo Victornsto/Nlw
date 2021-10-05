@@ -126,28 +126,34 @@ nav ul li {
   text-align: center;
 }
 
+nav ul li a {
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--base-color);
+}
+
 nav .menu {
+  /* Essa config esconde o menu, pra ele aparecer só quando nav.show .menu for chamado*/
   opacity: 0;
   visibility: hidden;
 }
-
+/* MOstrar Menu */
 nav.show .menu {
   opacity: 1;
   visibility: visible;
   background: var(--body-color);
-  height: 100vh;
-  width: 100vw;
+  /*view port é usado para cobrir a pagina, uma camada acima da pagina que estamos fazendo. Essas configutações fazem com que, ao abrir o menu, ele tome de conta da tela do dispositivo, sem sair da camada principal*/
+  height: 100vh; /* Altura do dispositivo */
+  width: 100vw; /* Largura do dispositivo */
   position: fixed;
   top: 0;
   left: 0;
-}
-
-nav.show .menu {
   display: grid;
-  place-content: center;
+  place-content: center; /* Deixa o conteudo no meio da tela */
 }
 
-/*================== MOSTRAR MENU +++++++++++++++++++*/
 nav.show ul.grid {
   gap: 4rem;
 }
