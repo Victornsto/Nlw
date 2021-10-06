@@ -23,7 +23,7 @@ img {
   --header-height: 4.5rem;
   /* HSL color mode */
 
-  --hue: 345;
+  --hue: 270;
   /* Variaveis funcionam para receber valores de configurações
      Nesse caso, ela está recebendo valores de cores específicas */
   --base-color: hsl(var(--hue) 36% 57%);
