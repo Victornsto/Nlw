@@ -93,8 +93,8 @@ body {
 }
 
 main {
-  margin-top: calc(
-    var(--header-height) + 2rem
+  margin-top: var(
+    --header-height
   ); /* Todos os conteudos abaixo tem que respeitar o main*/
 }
 
