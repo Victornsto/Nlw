@@ -16,7 +16,6 @@ for (const element of toggle) {
     //Nesse caso, toglle é uma palavra-chave/metodo que alterna entre os elementos (não confundir com a class). Os elementos da class toglle (icon-menu e icon-close) estão configurados no css para mostrar e fechar o menu. Quando houver um click, essa função vai buscar no nav a class show e alternar (toggle) entre elas. Se ela não tiver a class show, vai listar, e quando listar, vai aparecer o menu. Se o nav tiver a class show, ele vai remover o show, consequentemente, removendo o menu
   })
 }
-
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -25,3 +24,18 @@ for (const link of links) {
     // Aqui vai acontecer algo bem parecido com element. Só que ao invés de alternar(toggle) entre os elementos da class toggle(mostrar ou não mostrar a class show), ele vai simplesmete remover a class show
   })
 }
+
+/* ADICIONA SOMBRA NO HEARDER */
+
+const header = document.querySelector('#header')
+const navHeight =
+  header.offsetHeight /* offset seria o deslocamento e Height é altura, ou seja, a variavel vai pegar o valor da altura no header.  */
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= navHeight) {
+    /* Se a rolagem vertical da tela(window.scrolly) for maior ou igual a altura do header */
+    header.classList.add('scroll')
+  } else {
+    header.classList.remove('scroll')
+  }
+})

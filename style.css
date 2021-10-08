@@ -36,6 +36,9 @@ img {
 }
 
 /*================== BASE +++++++++++++++++++*/
+html {
+  scroll-behavior: smooth; /* Deixa a rolagem suave da pagina */
+}
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(
@@ -76,6 +79,15 @@ body {
   );
 }
 
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
+
 /*================== LAYOUT +++++++++++++++++++*/
 .container {
   margin-left: 1.5rem;
@@ -90,6 +102,14 @@ body {
 
 .section {
   padding: 5rem 0; /* vai criar um espaço de 80px em todas as sessões */
+}
+
+.section header {
+  margin-bottom: 2rem;
+}
+
+.section header strong {
+  color: var(--base-color);
 }
 
 main {
@@ -111,6 +131,10 @@ main {
   z-index: 100;
   background-color: var(--body-color);
   justify-content: flex-end;
+}
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
 /*================== NAV +++++++++++++++++++*/
@@ -158,6 +182,12 @@ nav .menu {
   /* Essa config esconde o menu, pra ele aparecer só quando nav.show .menu for chamado*/
   opacity: 0;
   visibility: hidden;
+  top: -20rem; /* Transição bacana */
+  transition: 0.2s; /* Transição bacana */
+}
+
+nav .menu ul {
+  display: none; /* Transição bacana */
 }
 /* MOstrar Menu */
 nav.show .menu {
@@ -177,6 +207,7 @@ nav.show .menu {
 
 nav.show ul.grid {
   gap: 4rem;
+  display: grid; /* Transição bacana */
 }
 
 nav .icon-menu {
@@ -194,12 +225,15 @@ nav .icon-close {
   opacity: 0;
   position: absolute;
   right: 1.5rem;
-  /* TRANSIÇÃO BACANA */
+  top: -1.5rem; /* Transição bacana */
+
+  transition: 0.2s; /* transição bacana */
 }
 
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem; /* Transição bacana */
 }
 
 /*================== LOGO +++++++++++++++++++*/
@@ -216,6 +250,7 @@ nav.show div.icon-close {
 /*================== HOME +++++++++++++++++++*/
 #home {
   overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+  background-color: var(--body-color);
 }
 
 #home .container {
@@ -263,6 +298,10 @@ nav.show div.icon-close {
 }
 
 /*================== ABOUT +++++++++++++++++++*/
+
+#about {
+  background-color: white;
+}
 #about .container {
   margin: 0;
 }
@@ -270,15 +309,9 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  text-align: justify;
 }
 
 #about .grid .text {
-  display: grid; /* habilita funcionalidades para o elemento selecionado */
-  gap: 2rem;
-}
-
-#about .grid {
   display: grid; /* habilita funcionalidades para o elemento selecionado */
   gap: 2rem;
 }
@@ -313,4 +346,39 @@ nav.show div.icon-close {
 
 #about {
   overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+}
+
+/*================== SERVICES +++++++++++++++++++*/
+#services {
+  overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+  background-color: var(--body-color);
+}
+
+#services header .titlle {
+  margin-bottom: 1rem;
+}
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+#services .card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25 0.25 0 0;
+  text-align: center;
+}
+
+#services .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.cards i {
+  display: block;
+  /* Os item em HTML são tratados como letras */
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  color: var(--base-color);
 }
