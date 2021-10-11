@@ -101,7 +101,7 @@ body {
 }
 
 .section {
-  padding: 5rem 0; /* vai criar um espaço de 80px em todas as sessões */
+  padding: 4rem 0; /* vai criar um espaço de 80px em todas as sessões */
 }
 
 .section header {
@@ -430,4 +430,34 @@ nav.show div.icon-close {
 
 .swiper-pagination-bullet-active {
   background: var(--base-color);
+}
+/*================ CONTACT ========================*/
+#contact .grid {
+  gap: 4rem;
+}
+#contact .text p,
+#contact .text h2 {
+  margin-bottom: 1.5rem;
+}
+
+#contact a {
+  width: 14.75rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  margin-right: 0.625rem;
+  font-size: 1.5rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
 }

@@ -48,3 +48,21 @@ const swiper = new Swiper('.swiper', {
   mouseswheel: true, // Ativa o swiper com a bolinha do mouse
   keyboard: true // Ativa o swiper com o mouse
 })
+
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duratiom: 700,
+  reset: true
+})
+scrollReveal.reveal(
+  `#home .imagem, #home .text,
+  #about .imagem, #about .text,
+  #services header, #services .cards,
+  #testimonials header, #testimonials .testimonials
+  #contact .text, #contact .links
+  `,
+  {
+    interval: 100
+  }
+)
