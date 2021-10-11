@@ -8,6 +8,12 @@
     <!-- ICON -->
     <link rel="stylesheet" href="assets/fonts/style.css" />
 
+    <!-- SWIPE-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
     <!-- STYLES -->
     <link rel="stylesheet" href="style.css" />
 
@@ -39,6 +45,7 @@
       </nav>
     </header>
     <main>
+      <!--=============== HOME ================-->
       <section class="section" id="home">
         <div class="container grid">
           <div class="imagem">
@@ -58,6 +65,7 @@
         </div>
       </section>
       <div class="divider-1"></div>
+      <!--=============== ABOUT ================-->
       <section class="section" id="about">
         <div class="container grid">
           <div class="imagem">
@@ -91,6 +99,7 @@
           </div>
         </div>
       </section>
+      <!--=============== SERVICES ================-->
       <div class="divider-2"></div>
       <section class="section" id="services">
         <div class="container grid">
@@ -131,14 +140,86 @@
         </div>
       </section>
       <div class="divider-1"></div>
+      <!--=============== TESTIMONIALS ================-->
       <section class="section" id="testimonials">
-        <div class="container grid">Depoimentos</div>
+        <div class="container">
+          <header>
+            <h2 class="titlle">Depoimentos de quem já passou por aqui</h2>
+          </header>
+          <div class="testimonials swiper">
+            <!-- Obs, quando for usar a biblioteca SWIPER, não podemos usar o grip-->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="testimonials swiper-slide">
+                <blockquote>
+                  <!-- Tag usada, geralmente, para usar citações de terceiros-->
+                  <p>
+                    <span>&ldquo;</span> Eu sou cliente do Beautysalon há 5 anos
+                    e não troco por nada! Certamente meu cabelo mudou muito
+                    depois que comecei a tratar somente com produtos naturais e
+                    veganos. São profissionais incríveis e qualificados.
+                  </p>
+                  <cite>
+                    <!--Área para citar alguem-->
+                    <img src="imagens/Carol Danvers.jpg" alt="Cabelo Loiro" />
+                    Carol Danvers
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonials swiper-slide">
+                <blockquote>
+                  <!-- Tag usada, geralmente, para usar citações de terceiros-->
+                  <p>
+                    <span>&ldquo;</span> Eu sou cliente do Beautysalon há 5 anos
+                    e não troco por nada! Certamente meu cabelo mudou muito
+                    depois que comecei a tratar somente com produtos naturais e
+                    veganos. São profissionais incríveis e qualificados.
+                  </p>
+                  <cite>
+                    <!--Área para citar alguem-->
+                    <img src="imagens/Natasha Romanoff.jpg" alt="Ruivo Liso" />
+                    Natasha Romanoff
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonials swiper-slide">
+                <blockquote>
+                  <!-- Tag usada, geralmente, para usar citações de terceiros-->
+                  <p>
+                    <span>&ldquo;</span> Eu sou cliente do Beautysalon há 5 anos
+                    e não troco por nada! Certamente meu cabelo mudou muito
+                    depois que comecei a tratar somente com produtos naturais e
+                    veganos. São profissionais incríveis e qualificados.
+                  </p>
+                  <cite>
+                    <!--Área para citar alguem-->
+                    <img
+                      src="imagens/Wanda Maximoff.jpg"
+                      alt="Ruivo Cacheado"
+                    />
+                    Wanda Maxmorff
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </section>
+      <!--=============== CONTACT ================-->
       <section class="section" id="contact">
         <div class="container grid">Contatos</div>
       </section>
       <footer></footer>
     </main>
+
+    <!--SWIPE-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!--MAIN>JS-->
     <script src="main.js"></script>
   </body>
 </html>

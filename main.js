@@ -39,3 +39,12 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scroll')
   }
 })
+
+const swiper = new Swiper('.swiper', {
+  sliderPerView: 1, // Quantas páginas irão aparecerna tela
+  pagination: {
+    el: '.swiper-pagination' // A paginação em si
+  },
+  mouseswheel: true, // Ativa o swiper com a bolinha do mouse
+  keyboard: true // Ativa o swiper com o mouse
+})

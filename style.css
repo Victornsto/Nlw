@@ -382,3 +382,52 @@ nav.show div.icon-close {
   margin-bottom: 1.5rem;
   color: var(--base-color);
 }
+
+/*================== TESTIMONIALS +++++++++++++++++++*/
+#testimonials {
+  overflow: hidden; /* alinha o conteudo do elemento para dentro da tela */
+  background-color: white;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover; /* ajusta o objeto para cobrir */
+  clip-path: circle(); /* Cria uma borda paraa img, nesse caso, um circle */
+  margin-right: 0.5rem;
+}
+/*================ SWIPER ========================*/
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
