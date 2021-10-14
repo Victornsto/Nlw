@@ -465,10 +465,7 @@ nav.show div.icon-close {
 /*================ CONTACT ========================*/
 
 footer {
-  width: 100%;
-  height: 18.375rem;
   background-color: var(--base-color);
-  padding: 4rem 1.5rem;
 }
 
 footer .text.grid {
@@ -494,10 +491,38 @@ footer .redes ul li a {
   margin-right: 2rem;
   font-size: 1.5rem;
   color: white;
-  transition: 0.2s;
+  transition: 0.3s;
+  display: inline-block; /* Efeito bacana */
 }
 
 footer .redes ul li a:hover {
-  bottom: 0.5rem;
   cursor: pointer;
+  color: var(--base-color-alt);
+  transform: translateY(-8px); /* Efeito bacana */
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  color: var(--text-color-light);
+  background-color: var(--base-color);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  line-height: 0; /* Deixa o item centralizado */
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%); /* Efeito de transição */
+}
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); /* Efeito de transição */
 }
