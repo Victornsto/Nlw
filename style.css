@@ -33,6 +33,10 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
 }
 
 /*================== BASE +++++++++++++++++++*/
@@ -101,7 +105,15 @@ body {
 }
 
 .section {
-  padding: 4rem 0; /* vai criar um espaço de 80px em todas as sessões */
+  padding: calc(5rem + var(--header-height)) 0; /* vai criar um espaço de 80px em todas as sessões */
+}
+
+.section .titlle {
+  font-size: var(--title-font-size);
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -468,6 +480,10 @@ footer {
   background-color: var(--base-color);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .text.grid {
   color: white;
   gap: 0.75rem;
@@ -482,20 +498,22 @@ footer .logo span {
   color: white;
 }
 
-footer .redes ul {
-  display: flex;
-  align-items: center;
+footer a {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
 }
 
-footer .redes ul li a {
-  margin-right: 2rem;
-  font-size: 1.5rem;
-  color: white;
+footer .redes {
+  grid-auto-flow: column; /* Faz colunas automaticamente */
+  width: fit-content; /* Ajusta o tamanho do grid para o tamanho do elemento */
+}
+
+footer .redes a {
   transition: 0.3s;
   display: inline-block; /* Efeito bacana */
 }
 
-footer .redes ul li a:hover {
+footer .redes a:hover {
   cursor: pointer;
   color: var(--base-color-alt);
   transform: translateY(-8px); /* Efeito bacana */
@@ -526,3 +544,23 @@ footer .redes ul li a:hover {
   opacity: 1;
   transform: translateY(0); /* Efeito de transição */
 }
+/*====================== MEDIA QURIES =============================*/
+/* extra large devices 1200 > */
+@media /*BREAK POINTS*/ (min-width: 1200px) {
+  main {
+    margin-top: var(
+      --header-height
+    ); /* Todos os conteudos abaixo tem que respeitar o main*/
+  }
+}
+
+/* extra large devices 1023 > */
+
+/* extra large devices 992 > */
+@media /* BREAK POINTS */ (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+/* extra large devices 767 > */
