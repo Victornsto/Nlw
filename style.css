@@ -555,6 +555,12 @@ footer .redes a:hover {
     ); /* Todos os conteudos abaixo tem que respeitar o main*/
   }
 
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto; /* Fica ajustado ao meio */
+  }
+
   .section {
     padding: 10rem 0;
   }
@@ -581,11 +587,16 @@ footer .redes a:hover {
   /*=====HOME=====*/
   #home .container {
     grid-auto-flow: column; /* Outra função que só é ativada com o grid, ela adiciona o grid com colunas */
-    /* width: fit-content;  Adapta o grid para o tamando do elemento */
+    /*width: fit-content; /*Adapta o grid para o tamando do elemento */
+    justify-content: space-between;
   }
 
-  #home .image {
+  #home .imagem {
     order: 1; /* order é uma função que somente elementos com grid podem ativar. Ela muda a ordem de aparição ma página */
+  }
+
+  #home .text {
+    order: 0;
   }
 }
 
