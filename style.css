@@ -37,6 +37,8 @@ img {
   /* fonts */
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --bory-font: 'DM Sans', sans-serif;
 }
 
 /*================== BASE +++++++++++++++++++*/
@@ -44,7 +46,7 @@ html {
   scroll-behavior: smooth; /* Deixa a rolagem suave da pagina */
 }
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--bory-font);
   color: var(
     --text-color
   ); /* Aplicação de uma variável com cores pré-definidas */
@@ -53,7 +55,7 @@ body {
 }
 
 .titlle {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -66,7 +68,7 @@ body {
   align-items: center;
   padding: 2rem;
   border-radius: 00.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--bory-font);
   transition: background 0.3s;
 }
 
@@ -251,7 +253,7 @@ nav.show div.icon-close {
 /*================== LOGO +++++++++++++++++++*/
 
 .logo {
-  font: 700 1.3125rem 'Poppins', sans-serif;
+  font: 700 1.3125rem var(--title-font);
   color: var(--title-color);
   align-items: center;
 }
@@ -551,6 +553,39 @@ footer .redes a:hover {
     margin-top: var(
       --header-height
     ); /* Todos os conteudos abaixo tem que respeitar o main*/
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    gap: 2rem;
+    display: flex;
+  }
+
+  nav .menu ul li a.titlle {
+    font: 500 1rem var(--title-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /*=====HOME=====*/
+  #home .container {
+    grid-auto-flow: column; /* Outra função que só é ativada com o grid, ela adiciona o grid com colunas */
+    /* width: fit-content;  Adapta o grid para o tamando do elemento */
+  }
+
+  #home .image {
+    order: 1; /* order é uma função que somente elementos com grid podem ativar. Ela muda a ordem de aparição ma página */
   }
 }
 
