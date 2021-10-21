@@ -554,7 +554,7 @@ footer .redes a:hover {
       --header-height
     ); /* Todos os conteudos abaixo tem que respeitar o main*/
   }
-
+  /*=====LAYOUT=====*/
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -564,7 +564,18 @@ footer .redes a:hover {
   .section {
     padding: 10rem 0;
   }
+  /*=====HEADER_SECTION=====*/
+  .section header {
+    max-width: 32rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
+  .button {
+    height: 3.1rem;
+  }
+  /*==========NAVIGATION*/
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -589,6 +600,7 @@ footer .redes a:hover {
     grid-auto-flow: column; /* Outra função que só é ativada com o grid, ela adiciona o grid com colunas */
     /*width: fit-content; /*Adapta o grid para o tamando do elemento */
     justify-content: space-between;
+    margin: 0 auto;
   }
 
   #home .imagem {
@@ -597,6 +609,52 @@ footer .redes a:hover {
 
   #home .text {
     order: 0;
+    max-width: 24rem;
+    text-align: left; /* Alinhamento do texto para a esquerda */
+  }
+
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /*=====TESTIMONIALS=====*/
+  /* Era só para ajustar o header */
+
+  /*=====SERVICES=====*/
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr; /* DIVIDR OS ELEMENTOS FILHOS DE FORMA FLEXIVEL */
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /*=====CONTACT=====*/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /*=====FOOTER=====*/
+
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre elementos */
+  }
+
+  footer .container .logo {
+    font-size: 2.25rem;
   }
 }
 

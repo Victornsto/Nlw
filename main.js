@@ -41,12 +41,19 @@ window.addEventListener('scroll', function () {
 })
 
 const swiper = new Swiper('.swiper', {
-  sliderPerView: 1, // Quantas páginas irão aparecerna tela
+  slidesPerView: 1, // Quantas páginas irão aparecerna tela
   pagination: {
     el: '.swiper-pagination' // A paginação em si
   },
   mouseswheel: true, // Ativa o swiper com a bolinha do mouse
-  keyboard: true // Ativa o swiper com o mouse
+  keyboard: true, // Ativa o swiper com o mouse
+  breakpoints: {
+    // Muda a regra quando chegar na margem de pixels selecionada
+    767: {
+      slidesPerView: 3,
+      setwrapperSize: true // Ativa a regra, já q o wrapper é o container dos swipers
+    }
+  }
 })
 
 const scrollReveal = ScrollReveal({
