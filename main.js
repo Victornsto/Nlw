@@ -31,14 +31,15 @@ const header = document.querySelector('#header')
 const navHeight =
   header.offsetHeight /* offset seria o deslocamento e Height é altura, ou seja, a variavel vai pegar o valor da altura no header.  */
 
-window.addEventListener('scroll', function () {
+/* ADICIONA SCROLL */
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     /* Se a rolagem vertical da tela(window.scrolly) for maior ou igual a altura do header */
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1, // Quantas páginas irão aparecerna tela
@@ -77,10 +78,16 @@ scrollReveal.reveal(
 
 // Bottom back to top
 const backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function () {
+function backToTop() {
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+
+/* WHEN SCROLL */
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
 })
